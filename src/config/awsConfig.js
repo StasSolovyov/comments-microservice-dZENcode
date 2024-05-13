@@ -1,14 +1,13 @@
-require('dotenv').config();
 const AWS = require('aws-sdk');
 
-// Конфигурация AWS SDK
+// Непосредственное указание параметров конфигурации
 AWS.config.update({
-    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
-    region: process.env.AWS_REGION,
+    accessKeyId: 'AKIA47CRVT2Q356TN7U7',
+    secretAccessKey: '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',
+    region: 'us-east-1',
 });
 
 const sqs = new AWS.SQS({ apiVersion: '2012-11-05' });
-const queueUrl = process.env.QUEUE_URL;
+const queueUrl = 'https://sqs.us-east-1.amazonaws.com/891377000097/Stas';
 
 module.exports = { sqs, queueUrl };
