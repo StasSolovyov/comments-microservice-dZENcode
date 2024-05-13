@@ -1,4 +1,3 @@
-require('dotenv').config();
 const express = require('express');
 const { pollQueue } = require('./services/queueService');
 const mongoose = require('./db'); // Предполагается, что db.js экспортирует настройки mongoose
